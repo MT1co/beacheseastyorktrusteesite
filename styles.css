@@ -365,6 +365,7 @@ p { color: var(--text-muted); }
   padding: 22px;
   text-align: center;
 }
+.vote-date-box p { color: var(--white); }
 .vote-date-box .label {
   font-size: 0.7rem;
   font-weight: 700;
@@ -415,6 +416,10 @@ p { color: var(--text-muted); }
   flex-wrap: wrap;
   gap: 8px;
   font-size: 0.78rem;
+  color: #93a0bd;
+}
+.footer-bottom p {
+  margin: 0;
   color: #93a0bd;
 }
 
