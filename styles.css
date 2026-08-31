@@ -124,8 +124,9 @@ p { color: var(--text-muted); }
   align-items: center;
 }
 .hero-name {
-  font-size: 2.6rem;
+  font-size: 3.4rem;
   line-height: 1.1;
+  margin-top: 6px;
 }
 .hero-riding {
   color: var(--green);
@@ -437,5 +438,5 @@ p { color: var(--text-muted); }
   .vote-panel { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 20px; }
   h2 { font-size: 1.6rem; }
-  .hero-name { font-size: 2.1rem; }
+  .hero-name { font-size: 2.5rem; }
 }
