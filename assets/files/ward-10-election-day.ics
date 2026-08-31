@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jocelyne Poirier Campaign//Election Day//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ward10-election-day-2026@jocelynepoirier.ca
+DTSTAMP:20260831T000000Z
+DTSTART:20261026T100000
+DTEND:20261026T200000
+SUMMARY:Election Day – Vote in Ward 10
+DESCRIPTION:Toronto municipal election day. Polls open 10 a.m.–8 p.m. Vote for Jocelyne Poirier for TDSB Trustee\, Ward 10.
+LOCATION:Ward 10\, Toronto\, ON
+URL:https://www.toronto.ca/city-government/elections/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Election Day reminder
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR
