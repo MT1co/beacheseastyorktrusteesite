@@ -332,6 +332,10 @@ p { color: var(--text-muted); }
   gap: 12px;
   flex-wrap: wrap;
 }
+.involved-card .btn-row-center {
+  justify-content: center;
+  margin-bottom: 16px;
+}
 .fine-print {
   font-size: 0.75rem;
   color: var(--text-muted);
