@@ -432,7 +432,6 @@ p { color: var(--text-muted); }
   .values .wrap {
     grid-template-columns: 1fr;
   }
-  .hero-photo-wrap { order: -1; }
   .priority-grid { grid-template-columns: 1fr; }
   .involved-grid { grid-template-columns: 1fr; }
   .vote-panel { grid-template-columns: 1fr; }
