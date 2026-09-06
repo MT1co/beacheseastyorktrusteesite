@@ -339,8 +339,9 @@ p { color: var(--text-muted); }
 .fine-print {
   font-size: 0.75rem;
   color: var(--text-muted);
-  margin: 16px 0 0;
+  margin: 12px 0 0;
 }
+.fine-print a { color: var(--navy); font-weight: 600; }
 
 /* Vote */
 .vote {
