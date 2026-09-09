@@ -117,12 +117,26 @@ p { color: var(--text-muted); }
 .hero {
   padding: 64px 0 48px;
 }
-.hero .wrap {
+.hero-grid {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  column-gap: 48px;
   align-items: center;
+  grid-template-areas:
+    "eyebrow photo"
+    "name    photo"
+    "riding  photo"
+    "copy    photo"
+    "actions photo"
+    "links   photo";
 }
+.hero-area-eyebrow { grid-area: eyebrow; }
+.hero-area-name { grid-area: name; }
+.hero-area-riding { grid-area: riding; }
+.hero-area-copy { grid-area: copy; }
+.hero-area-actions { grid-area: actions; }
+.hero-area-links { grid-area: links; }
+.hero-area-photo { grid-area: photo; }
 .hero-name {
   font-size: 3.4rem;
   line-height: 1.1;
@@ -432,11 +446,22 @@ p { color: var(--text-muted); }
 /* Responsive */
 @media (max-width: 860px) {
   .main-nav { display: none; }
-  .hero .wrap,
   .about .wrap,
   .values .wrap {
     grid-template-columns: 1fr;
   }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "eyebrow"
+      "name"
+      "riding"
+      "copy"
+      "photo"
+      "actions"
+      "links";
+  }
+  .hero-area-photo { margin: 28px 0 4px; }
   .priority-grid { grid-template-columns: 1fr; }
   .involved-grid { grid-template-columns: 1fr; }
   .vote-panel { grid-template-columns: 1fr; }
