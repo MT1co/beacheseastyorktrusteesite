@@ -371,6 +371,7 @@ p { color: var(--text-muted); }
   gap: 32px;
   align-items: center;
 }
+.vote-panel + .vote-panel { margin-top: 24px; }
 .vote-details p {
   margin: 6px 0 0;
   font-size: 0.92rem;

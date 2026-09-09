@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Jocelyne Poirier Campaign//Advance Voting//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ward10-advance-voting-2026@jocelynepoirier.ca
+DTSTAMP:20260831T000000Z
+DTSTART:20261009T100000
+DTEND:20261009T190000
+SUMMARY:Advanced Voting - Vote Jocelyne Poirier for TDSB Trustee
+DESCRIPTION:Toronto municipal advance voting. Polls open 10 a.m.–7 p.m.\, October 9-11\, 2026. Vote for Jocelyne Poirier for TDSB Trustee\, Ward 10.
+LOCATION:Ward 10\, Toronto\, ON
+URL:https://www.toronto.ca/city-government/elections/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Advance voting reminder
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+END:VCALENDAR
