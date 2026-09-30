@@ -9,6 +9,12 @@
   gtag('js', new Date());
 
   gtag('config', 'G-E9FPT7XQ35');
+
+  // Send a GA event for any element tagged with data-ga-event
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-ga-event]');
+    if (el) gtag('event', el.dataset.gaEvent, { link_location: el.dataset.gaLocation });
+  });
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,7 +35,7 @@
       <a href="#priorities">Priorities</a>
       <a href="#vote">Vote</a>
       <a href="#involved">Get Involved</a>
-      <a href="#involved" class="btn btn-pink">Donate</a>
+      <a href="#involved" class="btn btn-pink" data-ga-event="donate_click" data-ga-location="header">Donate</a>
     </nav>
   </div>
 </header>
@@ -50,7 +56,7 @@
       </div>
       <div class="hero-actions hero-area-actions">
         <a href="#priorities" class="btn btn-navy">My Priorities</a>
-        <a href="#involved" class="btn btn-pink">Get Involved</a>
+        <a href="#involved" class="btn btn-pink" data-ga-event="get_involved_click" data-ga-location="hero">Get Involved</a>
       </div>
       <div class="hero-links hero-area-links">
         <a href="#priorities">Better Learning</a>
@@ -147,19 +153,19 @@
           <h3>Get Involved</h3>
           <p>Volunteer, request a lawn sign, join campaign updates or get in touch.</p>
           <div class="btn-row">
-            <a href="https://gmail.us9.list-manage.com/subscribe?u=5db341dd2f4bd90d9cd50778f&amp;id=c25125ae6b" class="btn btn-navy">Volunteer</a>
-            <a href="https://gmail.us9.list-manage.com/subscribe?u=5db341dd2f4bd90d9cd50778f&amp;id=c25125ae6b" class="btn btn-outline">Get a Lawn Sign</a>
-            <a href="https://gmail.us9.list-manage.com/subscribe?u=5db341dd2f4bd90d9cd50778f&amp;id=c25125ae6b" class="btn btn-outline">Get Campaign Updates</a>
+            <a href="https://gmail.us9.list-manage.com/subscribe?u=5db341dd2f4bd90d9cd50778f&amp;id=c25125ae6b" class="btn btn-navy" data-ga-event="volunteer_signup_click" data-ga-location="get_involved">Volunteer</a>
+            <a href="https://gmail.us9.list-manage.com/subscribe?u=5db341dd2f4bd90d9cd50778f&amp;id=c25125ae6b" class="btn btn-outline" data-ga-event="lawn_sign_click" data-ga-location="get_involved">Get a Lawn Sign</a>
+            <a href="https://gmail.us9.list-manage.com/subscribe?u=5db341dd2f4bd90d9cd50778f&amp;id=c25125ae6b" class="btn btn-outline" data-ga-event="updates_signup_click" data-ga-location="get_involved">Get Campaign Updates</a>
           </div>
         </div>
         <div class="involved-card">
           <h3>Make a Contribution</h3>
           <p>Campaign contributions help fund voter outreach, signs, printing and community engagement.</p>
           <div class="btn-row btn-row-center">
-            <a href="https://checkout.square.site/merchant/ML1RJ9W4F4N8Y/checkout/WPOY4SSVGTTX2ZKFZ7YJR4BH" target="_blank" rel="noopener" class="btn btn-pink">Donate Now</a>
+            <a href="https://checkout.square.site/merchant/ML1RJ9W4F4N8Y/checkout/WPOY4SSVGTTX2ZKFZ7YJR4BH" target="_blank" rel="noopener" class="btn btn-pink" data-ga-event="donate_click" data-ga-location="donate_section">Donate Now</a>
           </div>
           <p class="fine-print">Please ensure your donation does not exceed the contribution limit of $1,200 per candidate. In addition, all donations must be made directly from an individual who is an Ontario resident.</p>
-          <p class="fine-print"><strong>Support by E-transfer:</strong> If paying by e-transfer you can send your donation to <a href="mailto:donate@jocelynepoirier.ca">donate@jocelynepoirier.ca</a>. Your full name and residential address must be included in the comments.</p>
+          <p class="fine-print"><strong>Support by E-transfer:</strong> If paying by e-transfer you can send your donation to <a href="mailto:donate@jocelynepoirier.ca" data-ga-event="donate_etransfer_click" data-ga-location="donate_section">donate@jocelynepoirier.ca</a>. Your full name and residential address must be included in the comments.</p>
         </div>
       </div>
     </div>
@@ -172,7 +178,7 @@
           <p class="eyebrow">Vote</p>
           <h2>Advance voting opens October 6.</h2>
           <p><strong>Advance Voting:</strong> October 6&ndash;11, 2026 &middot; 10 a.m.&ndash;7 p.m.</p>
-          <a href="assets/files/ward-10-advance-voting.ics" download class="btn btn-navy btn-block">Save Advance Voting Date to My Calendar</a>
+          <a href="assets/files/ward-10-advance-voting.ics" download class="btn btn-navy btn-block" data-ga-event="calendar_add" data-ga-location="advance">Save Advance Voting Date to My Calendar</a>
         </div>
         <div class="vote-date-box">
           <p class="label">Advance Voting</p>
@@ -185,7 +191,7 @@
           <p class="eyebrow">Vote</p>
           <h2>Make your voice count in Ward 10.</h2>
           <p><strong>Election Day:</strong> Monday, October 26, 2026 &middot; 10 a.m.&ndash;8 p.m.</p>
-          <a href="assets/files/ward-10-election-day.ics" download class="btn btn-navy btn-block">Save Election Date to My Calendar</a>
+          <a href="assets/files/ward-10-election-day.ics" download class="btn btn-navy btn-block" data-ga-event="calendar_add" data-ga-location="election_day">Save Election Date to My Calendar</a>
         </div>
         <div class="vote-date-box">
           <p class="label">Election Day</p>
