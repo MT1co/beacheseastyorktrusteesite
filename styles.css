@@ -443,8 +443,11 @@ p { color: var(--text-muted); }
   color: #c7cfe0;
   transition: color 0.15s, border-color 0.15s, background 0.15s;
 }
-.social-links a:hover,
-.social-links a:focus-visible { color: var(--white); background: var(--pink); border-color: var(--pink); }
+.social-links a:focus-visible,
+.social-links a:active { color: var(--white); background: var(--pink); border-color: var(--pink); }
+@media (hover: hover) {
+  .social-links a:hover { color: var(--white); background: var(--pink); border-color: var(--pink); }
+}
 .social-links svg { width: 17px; height: 17px; }
 .footer-bottom {
   padding-top: 18px;
@@ -483,6 +486,9 @@ p { color: var(--text-muted); }
   .involved-grid { grid-template-columns: 1fr; }
   .vote-panel { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+  .social-links { gap: 14px; margin-top: 10px; }
+  .social-links a { width: 48px; height: 48px; -webkit-tap-highlight-color: transparent; }
+  .social-links svg { width: 22px; height: 22px; }
   h2 { font-size: 1.6rem; }
   .hero-name { font-size: 2.5rem; }
 }
