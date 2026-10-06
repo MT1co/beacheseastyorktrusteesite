@@ -119,19 +119,16 @@ p { color: var(--text-muted); }
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   column-gap: 48px;
   align-items: center;
-  grid-template-rows: 1fr repeat(6, auto) 1fr;
   grid-template-areas:
-    ".       photo"
     "eyebrow photo"
     "name    photo"
     "riding  photo"
     "copy    photo"
     "actions photo"
-    "links   photo"
-    ".       photo";
+    "links   photo";
 }
 .hero-area-eyebrow { grid-area: eyebrow; }
 .hero-area-name { grid-area: name; }
@@ -190,14 +187,11 @@ p { color: var(--text-muted); }
   display: block;
   box-shadow: 0 20px 40px -18px rgba(11, 42, 103, 0.35);
 }
-/* Vertical (9:16) video: as wide as the column allows, but never taller than the viewport */
-.hero-video-col {
-  width: min(100%, calc((100svh - 220px) * 9 / 16));
-}
+.hero-video-col { width: 100%; }
 .hero-video {
   position: relative;
   width: 100%;
-  aspect-ratio: 9 / 16;
+  aspect-ratio: 16 / 9;
   border-radius: 4px;
   overflow: hidden;
   background: var(--navy);
@@ -495,7 +489,6 @@ p { color: var(--text-muted); }
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: none;
     grid-template-areas:
       "eyebrow"
       "name"
@@ -506,7 +499,6 @@ p { color: var(--text-muted); }
       "links";
   }
   .hero-grid .hero-area-photo { margin: 28px -24px 4px; }
-  .hero-grid .hero-area-photo .hero-video-col { width: min(100%, calc((100svh - 80px) * 9 / 16)); }
   .hero-video { border-radius: 0; }
   .priority-grid { grid-template-columns: 1fr; }
   .involved-grid { grid-template-columns: 1fr; }
